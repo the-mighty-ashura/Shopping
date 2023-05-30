@@ -7,14 +7,30 @@ product_2 = input("Please enter the name of the second product: ")
 # Prompt the user to enter the name of the third product and store it in a variable
 product_3 = input("Please enter the name of the third product: ")
 
-# Prompt the user to enter the price of the first product and convert it to a float, then store it in a variable
-price_of_product_1 = float(input("Please enter the price of the first product, including the amount of cents: "))
+# Prompt the user to enter the price of the first product and handle non-numeric input
+while True:
+    try:
+        price_of_product_1 = float(input("Please enter the price of the first product, including the amount of cents: "))
+        break
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
 
-# Prompt the user to enter the price of the second product and convert it to a float, then store it in a variable
-price_of_product_2 = float(input("Please enter the price of the second product, including the amount of cents: "))
+# Prompt the user to enter the price of the second product and handle non-numeric input
+while True:
+    try:
+        price_of_product_2 = float(input("Please enter the price of the second product, including the amount of cents: "))
+        break
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
 
-# Prompt the user to enter the price of the third product and convert it to a float, then store it in a variable
-price_of_product_3 = float(input("Please enter the price of the third product, including the amount of cents: "))
+# Prompt the user to enter the price of the third product and handle non-numeric input
+while True:
+    try:
+        price_of_product_3 = float(input("Please enter the price of the third product, including the amount of cents: "))
+        break
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
+
 
 # Calculate the total price of all three products and store it in a variable
 total_price_of_products = price_of_product_1 + price_of_product_2 + price_of_product_3
